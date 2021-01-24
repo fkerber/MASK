@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MaskApp</string>
+    <string name="connectButtonText">Connect to service</string>
+    <string name="disconnectButtonText">Disconnect from service</string>
+    <string name="subscribeAccel">Subscribe to Accelerometer</string>
+    <string name="unsubscribeAccel">Unsuscribe from Accelerometer</string>
+    <string name="subscribeGyro">Subscribe to Gyroscope</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="unsubscribe">Unsubscribe</string>
+    <string name="unsubscribeGyro">Unsubscribe from Gyroscope</string>
+    <string name="statConnected">Service connected</string>
+    <string name="statDisconnected">Service disconnected</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

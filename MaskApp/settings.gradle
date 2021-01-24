@@ -1,0 +1,5 @@
+include ':testapp'
+include ':maskcommons'
+project(':maskcommons').projectDir = new File('../MaskLibs/maskcommons')
+include ':maskconnection'
+project(':maskconnection').projectDir = new File('../MaskLibs/maskconnection')
