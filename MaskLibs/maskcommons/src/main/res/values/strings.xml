@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MaskCommons</string>
+    <string name="permission_description">Allows connection to the Mask sensor service and thus access to all sensors on this device.</string>
+    <string name="permission_label">MASK sensor access permission</string>
+</resources>
