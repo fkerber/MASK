@@ -1,0 +1,3 @@
+include ':phoneplugin', ':maskplugin', 'maskcommons'
+project(':maskplugin').projectDir = new File('../MaskLibs/maskplugin')
+project(':maskcommons').projectDir = new File('../MaskLibs/maskcommons')
