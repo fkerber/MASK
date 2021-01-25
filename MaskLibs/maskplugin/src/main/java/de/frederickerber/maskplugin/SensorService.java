@@ -20,7 +20,6 @@ import de.frederickerber.maskcommons.ServiceMsg;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -220,6 +219,22 @@ public abstract class SensorService extends Service {
 
         sendDataToSubscribers(mConnectedDevices.get(deviceIndex), sensorType, data, timestamp);
     }
+
+    /**
+     * Broadcast a measurement of ecg to subscribers
+     *
+     * @param timestamp   The time the measurement was taken at, in nanoseconds
+     * @param serviceName The name of service
+     * @param deviceIndex The index of device
+     * @param values      An ECG reading.
+     */
+    public void broadcastECGReading(long timestamp, String serviceName, int deviceIndex, float[] values) {
+        if (values == null || values.length < 1) {
+            throw new IllegalArgumentException("values provided are null or empty");
+        }
+        broadcastFloatArray(timestamp, SensorType.ECG, serviceName, deviceIndex, values);
+    }
+
 
     /**
      * Broadcast a skin temperature measurement to subscribers

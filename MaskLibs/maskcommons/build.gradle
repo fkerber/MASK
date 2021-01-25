@@ -22,6 +22,15 @@ android {
     }
 }
 
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+}
+
 task generateSources (type: Jar) {
     classifier = 'sources'
     from android.sourceSets.main.java.srcDirs
@@ -33,6 +42,5 @@ artifacts {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    implementation 'com.android.support:appcompat-v7:25.4.0'
+    testImplementation 'junit:junit:4.13.1'
 }
